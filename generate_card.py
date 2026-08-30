@@ -26,7 +26,6 @@ FONT_STACK = "SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
 THEMES = {
     "light": {
         "bg": "#ffffff",
-        "panel": "#fffdfb",
         "border": "#d97757",
         "text": "#2d2a26",
         "muted": "#7a746c",
@@ -36,7 +35,6 @@ THEMES = {
     },
     "dark": {
         "bg": "#0d1117",
-        "panel": "#161b22",
         "border": "#d97757",
         "text": "#e6edf3",
         "muted": "#8b949e",
@@ -470,11 +468,11 @@ def build_svg(args, theme_name: str) -> str:
 
   <!-- welcome box; the title sits on the top border like the CLI's ╭── Claude Code ──╮ -->
   <rect x="{box_x}" y="{box_y}" width="{box_w}" height="{box_h:.1f}" rx="10"
-        fill="{C['panel']}" stroke="{C['border']}" stroke-width="1.5"/>
+        fill="none" stroke="{C['border']}" stroke-width="1.5"/>
   <line x1="{split_x:.1f}" y1="{box_y}" x2="{split_x:.1f}" y2="{box_y + box_h:.1f}"
         stroke="{C['border']}" stroke-width="1" opacity="0.5"/>
   <rect x="{box_x + 20}" y="{box_y - 9}" width="{(text_cols(args.title) + 2) * col_px(12.5):.1f}"
-        height="18" fill="{C['panel']}"/>
+        height="18" fill="{C['bg']}"/>
   <text x="{box_x + 28}" y="{box_y + 4}" font-size="12.5" font-weight="bold"
         fill="{C['accent']}">{escape(args.title)}</text>
 
@@ -506,7 +504,7 @@ def main():
     p.add_argument("--model", default="Sonnet 5")
     p.add_argument("--plan", default="Claude Pro")
     p.add_argument("--cwd", default="~/project")
-    p.add_argument("--title", default="Claude Code v2.1.241",
+    p.add_argument("--title", default="Claude Code",
                    help="text shown on the top border of the box")
     p.add_argument("--prompt", default="Tell me about yourself")
     p.add_argument("--response", default="",
@@ -520,7 +518,6 @@ def main():
                    help="'both' writes <out>-light.svg and <out>-dark.svg")
     p.add_argument("--tips", nargs="+", default=[
         "Run /init to create a CLAUDE.md file with instructions for Claude",
-        "Note: You have launched claude in your home directory.",
     ])
     p.add_argument("--whatsnew", nargs="+", default=[
         "Added `PreModelSwitch` and `PostModelSwitch` hook events",

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 524" width="900" height="524" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 502" width="900" height="502" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">
   <style>
     text { font-family: SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
 
@@ -27,17 +27,17 @@
     @keyframes eyeblink { 0%, 92%, 100% { opacity: 0; } 94%, 96% { opacity: 1; } }
   </style>
 
-  <rect x="0" y="0" width="900" height="524" fill="#ffffff"/>
+  <rect x="0" y="0" width="900" height="502" fill="#ffffff"/>
 
   <!-- welcome box; the title sits on the top border like the CLI's ╭── Claude Code ──╮ -->
-  <rect x="16" y="22" width="868" height="208.0" rx="10"
-        fill="#fffdfb" stroke="#d97757" stroke-width="1.5"/>
-  <line x1="397.9" y1="22" x2="397.9" y2="230.0"
+  <rect x="16" y="22" width="868" height="196.0" rx="10"
+        fill="none" stroke="#d97757" stroke-width="1.5"/>
+  <line x1="397.9" y1="22" x2="397.9" y2="218.0"
         stroke="#d97757" stroke-width="1" opacity="0.5"/>
-  <rect x="36" y="13" width="165.0"
-        height="18" fill="#fffdfb"/>
+  <rect x="36" y="13" width="97.5"
+        height="18" fill="#ffffff"/>
   <text x="44" y="26" font-size="12.5" font-weight="bold"
-        fill="#d97757">Claude Code v2.1.241</text>
+        fill="#d97757">Claude Code</text>
 
     <text x="207.0" y="68.0" font-size="17" font-weight="bold" fill="#2d2a26" text-anchor="middle">Welcome back MoomA!</text>
   <g class="mascot-bob"><g shape-rendering="crispEdges"><rect x="171.0" y="94.0" width="6.5" height="6.5" fill="#f2a29a"/>
@@ -156,39 +156,38 @@
       <rect class="mascot-blink" x="225.0" y="106.0" width="6.5" height="6.5" fill="#f2a29a"/>
       <rect class="mascot-blink" x="183.0" y="112.0" width="6.5" height="6.5" fill="#f2a29a"/>
       <rect class="mascot-blink" x="225.0" y="112.0" width="6.5" height="6.5" fill="#f2a29a"/></g></g>
-  <text x="207.0" y="180.0" font-size="11.5" fill="#7a746c" text-anchor="middle">Opus 5 · Claude Pro · reiya0914@gmail.com's Organiz…</text>
+  <text x="207.0" y="180.0" font-size="11.5" fill="#7a746c" text-anchor="middle">Opus 5 · Claude Pro · Individual</text>
   <text x="207.0" y="196.0" font-size="11.5" fill="#7a746c" text-anchor="middle">~/claude-code-readme-card</text>
 
     <text x="415.9" y="52.0" font-size="12.5" font-weight="bold" fill="#d97757">Tips for getting started</text>
   <text x="415.9 423.4 430.9 438.4 445.9 453.4 460.9 468.4 475.9 483.4 490.9 498.4 505.9 513.4 520.9 528.4 535.9 543.4 550.9 558.4 565.9 573.4 580.9 588.4 595.9 603.4 610.9 618.4 625.9 633.4 640.9 648.4 655.9 663.4 670.9 678.4 685.9 693.4 700.9 708.4 715.9 723.4 730.9 738.4 745.9 753.4 760.9 768.4 775.9 783.4 790.9 798.4 805.9 813.4 820.9 828.4 835.9 843.4 850.9" y="70.0" font-size="12.5" xml:space="preserve"><tspan fill="#7a746c">Run /init to create a CLAUDE.md file with instructions for </tspan></text>
   <text x="415.9 423.4 430.9 438.4 445.9 453.4" y="86.0" font-size="12.5" xml:space="preserve"><tspan fill="#7a746c">Claude</tspan></text>
-  <text x="415.9 423.4 430.9 438.4 445.9 453.4 460.9 468.4 475.9 483.4 490.9 498.4 505.9 513.4 520.9 528.4 535.9 543.4 550.9 558.4 565.9 573.4 580.9 588.4 595.9 603.4 610.9 618.4 625.9 633.4 640.9 648.4 655.9 663.4 670.9 678.4 685.9 693.4 700.9 708.4 715.9 723.4 730.9 738.4 745.9 753.4 760.9 768.4 775.9 783.4 790.9 798.4 805.9 813.4" y="102.0" font-size="12.5" xml:space="preserve"><tspan fill="#7a746c">Note: You have launched claude in your home directory.</tspan></text>
-  <line x1="415.9" y1="124.0" x2="866.0" y2="124.0" stroke="#d97757" stroke-width="1" opacity="0.5"/>
-  <text x="415.9" y="144.0" font-size="12.5" font-weight="bold" fill="#d97757">What's new</text>
-  <text x="415.9 423.4 430.9 438.4 445.9 453.4 460.9 468.4 475.9 483.4 490.9 498.4 505.9 513.4 520.9 528.4 535.9 543.4 550.9 558.4 565.9 573.4 580.9 588.4 595.9 603.4 610.9 618.4 625.9 633.4 640.9 648.4 655.9 663.4 670.9 678.4 685.9 693.4 700.9 708.4 715.9 723.4 730.9 738.4 745.9 753.4 760.9 768.4 775.9 783.4 790.9 798.4" y="162.0" font-size="12.5" xml:space="preserve"><tspan fill="#7a746c">Added </tspan><tspan fill="#b3541e">PreModelSwitch</tspan><tspan fill="#7a746c"> and </tspan><tspan fill="#b3541e">PostModelSwitch</tspan><tspan fill="#7a746c"> hook events</tspan></text>
-  <text x="415.9 423.4 430.9 438.4 445.9 453.4 460.9 468.4 475.9 483.4 490.9 498.4 505.9 513.4 520.9 528.4 535.9 543.4 550.9 558.4 565.9 573.4 580.9 588.4 595.9 603.4 610.9 618.4 625.9 633.4 640.9 648.4 655.9 663.4 670.9 678.4 685.9 693.4 700.9 708.4 715.9 723.4 730.9 738.4 745.9 753.4 760.9 768.4 775.9 783.4 790.9 798.4 805.9 813.4 820.9 828.4 835.9 843.4" y="178.0" font-size="12.5" xml:space="preserve"><tspan fill="#7a746c">Added live streaming of a foreground subagent's tool calls</tspan></text>
-  <text x="415.9 423.4 430.9 438.4 445.9 453.4 460.9 468.4 475.9 483.4 490.9 498.4 505.9 513.4 520.9 528.4 535.9 543.4 550.9 558.4 565.9 573.4 580.9 588.4 595.9 603.4 610.9 618.4 625.9 633.4 640.9 648.4 655.9" y="194.0" font-size="12.5" xml:space="preserve"><tspan fill="#7a746c">Added a Spend limit bar to </tspan><tspan fill="#b3541e">/usage</tspan></text>
-  <text x="415.9" y="210.0" font-size="12.5" fill="#7a746c" font-style="italic">/release-notes for more</text>
+  <line x1="415.9" y1="108.0" x2="866.0" y2="108.0" stroke="#d97757" stroke-width="1" opacity="0.5"/>
+  <text x="415.9" y="128.0" font-size="12.5" font-weight="bold" fill="#d97757">What's new</text>
+  <text x="415.9 423.4 430.9 438.4 445.9 453.4 460.9 468.4 475.9 483.4 490.9 498.4 505.9 513.4 520.9 528.4 535.9 543.4 550.9 558.4 565.9 573.4 580.9 588.4 595.9 603.4 610.9 618.4 625.9 633.4 640.9 648.4 655.9 663.4 670.9 678.4 685.9 693.4 700.9 708.4 715.9 723.4 730.9 738.4 745.9 753.4 760.9 768.4 775.9 783.4 790.9 798.4" y="146.0" font-size="12.5" xml:space="preserve"><tspan fill="#7a746c">Added </tspan><tspan fill="#b3541e">PreModelSwitch</tspan><tspan fill="#7a746c"> and </tspan><tspan fill="#b3541e">PostModelSwitch</tspan><tspan fill="#7a746c"> hook events</tspan></text>
+  <text x="415.9 423.4 430.9 438.4 445.9 453.4 460.9 468.4 475.9 483.4 490.9 498.4 505.9 513.4 520.9 528.4 535.9 543.4 550.9 558.4 565.9 573.4 580.9 588.4 595.9 603.4 610.9 618.4 625.9 633.4 640.9 648.4 655.9 663.4 670.9 678.4 685.9 693.4 700.9 708.4 715.9 723.4 730.9 738.4 745.9 753.4 760.9 768.4 775.9 783.4 790.9 798.4 805.9 813.4 820.9 828.4 835.9 843.4" y="162.0" font-size="12.5" xml:space="preserve"><tspan fill="#7a746c">Added live streaming of a foreground subagent's tool calls</tspan></text>
+  <text x="415.9 423.4 430.9 438.4 445.9 453.4 460.9 468.4 475.9 483.4 490.9 498.4 505.9 513.4 520.9 528.4 535.9 543.4 550.9 558.4 565.9 573.4 580.9 588.4 595.9 603.4 610.9 618.4 625.9 633.4 640.9 648.4 655.9" y="178.0" font-size="12.5" xml:space="preserve"><tspan fill="#7a746c">Added a Spend limit bar to </tspan><tspan fill="#b3541e">/usage</tspan></text>
+  <text x="415.9" y="194.0" font-size="12.5" fill="#7a746c" font-style="italic">/release-notes for more</text>
 
   <!-- user prompt line -->
-    <text x="30.0 38.1 46.2 54.3 62.4 70.5 78.6 86.7 94.8 102.9 111.0 119.1 127.2 135.3 151.5 167.7 183.9 200.1 216.3 232.5 248.7 264.9 281.1 297.3 305.4 313.5 321.6 329.7 337.8 345.9 362.1 378.3 394.5 410.7 426.9 443.1 459.3 475.5 491.7 507.9 516.0 524.1 532.2 540.3 548.4 556.5 572.7 580.8 588.9 597.0 605.1 613.2 621.3 629.4 637.5 645.6 653.7 661.8 678.0 694.2 710.4 726.6 742.8 759.0 775.2 791.4 807.6 823.8 840.0 856.2" y="272.0" font-size="13.5" xml:space="preserve"><tspan fill="#2d2a26">❯ claude codeの画面ですが、自分のgithubのプロフィールに出すreadmeにclaude codeの画面みたいなものを表示し</tspan></text>
-  <text x="46.2 62.4 78.6 94.8" y="292.0" font-size="13.5" xml:space="preserve"><tspan fill="#2d2a26">たいです</tspan></text>
-  <rect class="cursor" x="111.0" y="281.0" width="8" height="15" fill="#2d2a26"/>
+    <text x="30.0 38.1 46.2 54.3 62.4 70.5 78.6 86.7 94.8 102.9 111.0 119.1 127.2 135.3 151.5 167.7 183.9 200.1 216.3 232.5 248.7 264.9 281.1 297.3 305.4 313.5 321.6 329.7 337.8 345.9 362.1 378.3 394.5 410.7 426.9 443.1 459.3 475.5 491.7 507.9 516.0 524.1 532.2 540.3 548.4 556.5 572.7 580.8 588.9 597.0 605.1 613.2 621.3 629.4 637.5 645.6 653.7 661.8 678.0 694.2 710.4 726.6 742.8 759.0 775.2 791.4 807.6 823.8 840.0 856.2" y="260.0" font-size="13.5" xml:space="preserve"><tspan fill="#2d2a26">❯ claude codeの画面ですが、自分のgithubのプロフィールに出すreadmeにclaude codeの画面みたいなものを表示し</tspan></text>
+  <text x="46.2 62.4 78.6 94.8" y="280.0" font-size="13.5" xml:space="preserve"><tspan fill="#2d2a26">たいです</tspan></text>
+  <rect class="cursor" x="111.0" y="269.0" width="8" height="15" fill="#2d2a26"/>
 
   <!-- assistant response -->
-  <text x="30.0 45.6 61.2 76.8 92.4 108.0 123.6 131.4 139.2 147.0 154.8 162.6 170.4 186.0 201.6" y="326.0" font-size="13" xml:space="preserve"><tspan fill="#2d2a26">こんにちは、</tspan><tspan font-weight="bold" fill="#2d2a26">MoomA</tspan><tspan fill="#2d2a26"> です。</tspan></text>
-  <text x="30.0 37.8 45.6 61.2 76.8 92.4 108.0 123.6 139.2 154.8 162.6 170.4 178.2 186.0 193.8 209.4 225.0 240.6 256.2 271.8 287.4 303.0 318.6 334.2" y="353.9" font-size="13" xml:space="preserve"><tspan fill="#2d2a26">• バックエンドと CLI ツールをよく書きます</tspan></text>
-  <text x="30.0 37.8 45.6 61.2 76.8 92.4 100.2 108.0 115.8 123.6 131.4 139.2 147.0 154.8 162.6 170.4 178.2 186.0 193.8 209.4 225.0 240.6 256.2 271.8 287.4 303.0 318.6 334.2 349.8 365.4 381.0 396.6 412.2" y="371.9" font-size="13" xml:space="preserve"><tspan fill="#2d2a26">• 最近は </tspan><tspan fill="#b3541e">Claude Code</tspan><tspan fill="#2d2a26"> を使った自動化に興味があります</tspan></text>
-  <text x="30.0 37.8 45.6 61.2 76.8 92.4 108.0 123.6 139.2 147.0 154.8 162.6 170.4 178.2 186.0 193.8 201.6 217.2 225.0 232.8 240.6 248.4 256.2 264.0 271.8 279.6 287.4 295.2" y="389.9" font-size="13" xml:space="preserve"><tspan fill="#2d2a26">• 好きな言語は Python と TypeScript</tspan></text>
-  <text x="30.0" y="417.8" font-size="14" font-weight="bold" fill="#d97757" xml:space="preserve">Links</text>
-  <text x="30.0 37.8 45.6 53.4 61.2 69.0 76.8 84.6 92.4 100.2 108.0 115.8 123.6 131.4 139.2 147.0 154.8 162.6 170.4 178.2 186.0 193.8 201.6 217.2 232.8 248.4 264.0 279.6 295.2 310.8" y="445.7" font-size="13" xml:space="preserve"><tspan fill="#b3541e">github.com/MoomA-0750</tspan><tspan fill="#2d2a26"> を見てください。</tspan></text>
+  <text x="30.0 45.6 61.2 76.8 92.4 108.0 123.6 139.2 154.8 170.4 186.0 201.6 217.2 232.8 248.4 264.0" y="314.0" font-size="13" xml:space="preserve"><tspan fill="#2d2a26">なんかえぇ感じのレドメ書くやで～</tspan></text>
+  <text x="30.0" y="341.9" font-size="15" font-weight="bold" fill="#d97757" xml:space="preserve">MoomA</text>
+  <text x="30.0 45.6 61.2 69.0 76.8 92.4 108.0" y="359.9" font-size="13" xml:space="preserve"><tspan fill="#2d2a26">読み: むめい</tspan></text>
+  <text x="30.0 37.8 45.6 61.2 76.8 92.4 108.0 123.6 139.2" y="387.8" font-size="13" xml:space="preserve"><tspan fill="#2d2a26">• なんもわからん</tspan></text>
+  <text x="30.0 37.8 45.6 61.2 76.8 92.4 108.0 123.6 139.2 154.8 170.4 186.0 201.6" y="405.8" font-size="13" xml:space="preserve"><tspan fill="#2d2a26">• ヴァイブコーディング厨</tspan></text>
+  <text x="30.0 37.8 45.6 53.4 61.2 69.0 76.8 84.6 92.4 100.2 108.0 115.8 123.6 131.4 147.0 162.6 178.2 193.8 209.4 225.0" y="423.8" font-size="13" xml:space="preserve"><tspan fill="#2d2a26">• Claude Codeとズッ友</tspan><tspan font-weight="bold" fill="#2d2a26">ハート</tspan></text>
 
   <!-- thinking indicator -->
-  <g transform="translate(38.0, 489.7)">
+  <g transform="translate(38.0, 467.8)">
       <g class="sp-dot"><circle cx="0" cy="0" r="1.8" fill="#d97757"/></g>
       <g class="sp-plus"><line x1="0" y1="0" x2="0" y2="-4.2" stroke="#d97757" stroke-width="2.0" stroke-linecap="round" transform="rotate(0)"/><line x1="0" y1="0" x2="0" y2="-4.2" stroke="#d97757" stroke-width="2.0" stroke-linecap="round" transform="rotate(90)"/><line x1="0" y1="0" x2="0" y2="-4.2" stroke="#d97757" stroke-width="2.0" stroke-linecap="round" transform="rotate(180)"/><line x1="0" y1="0" x2="0" y2="-4.2" stroke="#d97757" stroke-width="2.0" stroke-linecap="round" transform="rotate(270)"/></g>
       <g class="sp-star"><line x1="0" y1="0" x2="0" y2="-5.6" stroke="#d97757" stroke-width="2.0" stroke-linecap="round" transform="rotate(0)"/><line x1="0" y1="0" x2="0" y2="-5.6" stroke="#d97757" stroke-width="2.0" stroke-linecap="round" transform="rotate(60)"/><line x1="0" y1="0" x2="0" y2="-5.6" stroke="#d97757" stroke-width="2.0" stroke-linecap="round" transform="rotate(120)"/><line x1="0" y1="0" x2="0" y2="-5.6" stroke="#d97757" stroke-width="2.0" stroke-linecap="round" transform="rotate(180)"/><line x1="0" y1="0" x2="0" y2="-5.6" stroke="#d97757" stroke-width="2.0" stroke-linecap="round" transform="rotate(240)"/><line x1="0" y1="0" x2="0" y2="-5.6" stroke="#d97757" stroke-width="2.0" stroke-linecap="round" transform="rotate(300)"/></g>
       <g class="sp-sparkle"><line x1="0" y1="0" x2="0" y2="-7.4" stroke="#d97757" stroke-width="2.2" stroke-linecap="round" transform="rotate(0)"/><line x1="0" y1="0" x2="0" y2="-7.4" stroke="#d97757" stroke-width="2.2" stroke-linecap="round" transform="rotate(60)"/><line x1="0" y1="0" x2="0" y2="-7.4" stroke="#d97757" stroke-width="2.2" stroke-linecap="round" transform="rotate(120)"/><line x1="0" y1="0" x2="0" y2="-7.4" stroke="#d97757" stroke-width="2.2" stroke-linecap="round" transform="rotate(180)"/><line x1="0" y1="0" x2="0" y2="-7.4" stroke="#d97757" stroke-width="2.2" stroke-linecap="round" transform="rotate(240)"/><line x1="0" y1="0" x2="0" y2="-7.4" stroke="#d97757" stroke-width="2.2" stroke-linecap="round" transform="rotate(300)"/></g>
   </g>
-  <text x="56.0" y="494.7" font-size="12.5" fill="#d97757">Forming… <tspan fill="#7a746c">(esc to interrupt)</tspan></text>
+  <text x="56.0" y="472.8" font-size="12.5" fill="#d97757">Forming… <tspan fill="#7a746c">(esc to interrupt)</tspan></text>
 </svg>
