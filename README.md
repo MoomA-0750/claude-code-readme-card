@@ -1,9 +1,8 @@
 # claude-code-readme-card
 
-Generate a Claude Code welcome-screen-style animated SVG card for your GitHub
-profile README. No dependencies — pure Python stdlib, outputs a single
-self-contained SVG (animation is plain CSS embedded in the file, so it
-animates correctly even as a plain markdown image).
+Generate a Claude Code-style animated SVG card for your GitHub profile README.
+No dependencies — pure Python stdlib, outputs a single self-contained SVG
+(animation is plain CSS embedded in the file, so it animates even as an image).
 
 ## Example
 
@@ -18,11 +17,11 @@ animates correctly even as a plain markdown image).
 ```bash
 python3 generate_card.py \
   --name "YourName" \
-  --org "Personal" \
-  --prompt "Explain this codebase to me" \
-  --whatsnew "Added PreModelSwitch/PostModelSwitch hook events" \
-             "Added live streaming of subagent tool calls" \
-             "Added a spend limit bar to /usage" \
+  --org "your-org" \
+  --model "Opus 5" \
+  --cwd "~/your-project" \
+  --prompt "Tell me about yourself" \
+  --response-file about.md \
   --theme both \
   --out card.svg
 ```
@@ -32,8 +31,8 @@ python3 generate_card.py \
 ### Light / dark switching
 
 GitHub honours `<picture>` with `prefers-color-scheme` inside a README, so a
-single embed can follow the reader's theme. Note that markdown image syntax
-(`![...](...)`) cannot do this — you need the HTML form:
+single embed follows the reader's theme. Markdown image syntax (`![...](...)`)
+cannot do this — you need the HTML form:
 
 ```html
 <picture>
@@ -43,38 +42,67 @@ single embed can follow the reader's theme. Note that markdown image syntax
 </picture>
 ```
 
-If you only want one theme, generate with `--theme light` (or `dark`) and embed
-it the plain way:
+For a single theme, use `--theme light` (or `dark`) and embed it plainly:
 
 ```markdown
 ![claude code](./card.svg)
 ```
 
+### The response body
+
+`--response` (or `--response-file`) is where you put your own profile content.
+It is rendered as the assistant's reply, in a small markdown subset:
+
+| Syntax | Result |
+| --- | --- |
+| `# Heading` / `## Heading` | Bold, accent-coloured heading |
+| `- item` / `* item` | Bullet, with wrapped lines hanging under the text |
+| `**bold**` | Bold |
+| `` `code` `` | Code-coloured span |
+| ` ``` ` fences | Indented code block |
+| blank line | Vertical gap |
+
+Long lines wrap on their own, and CJK text wraps per character the way a
+terminal does.
+
 ### Options
 
 | Flag | Default | Description |
 | --- | --- | --- |
-| `--name` | `Guest` | Shown in "Welcome back {name}!" (truncated if long) |
-| `--org` | `Personal` | Shown in the org/account line |
-| `--model` | `Sonnet 5` | Model name shown in the status lines |
-| `--cwd` | `~/project` | Path shown under the welcome message |
-| `--prompt` | `Let's build something today` | Text in the prompt box (truncated if long) |
-| `--thinking-word` | `Pondering` | Word shown next to the animated spinner |
+| `--name` | `Guest` | Shown in "Welcome back {name}!" |
+| `--org` | `Personal` | Shown in the account line |
+| `--model` | `Sonnet 5` | Model name in the account line |
+| `--plan` | `Claude Pro` | Plan name in the account line |
+| `--cwd` | `~/project` | Path under the welcome message |
+| `--title` | `Claude Code v2.1.241` | Text on the box's top border |
+| `--prompt` | `Tell me about yourself` | The `❯` user line; wraps, cursor parks at its end |
+| `--response` | — | Assistant reply, markdown subset |
+| `--response-file` | — | Read `--response` from a file |
+| `--tips` | 2 example lines | "Tips for getting started" lines |
+| `--whatsnew` | 3 example lines | "What's new" lines |
+| `--thinking-word` | `Forming` | Word beside the spinner |
+| `--thinking-suffix` | `(esc to interrupt)` | Text after the spinner word |
 | `--theme` | `light` | `light`, `dark`, or `both` |
-| `--whatsnew` | 3 example lines | Up to 3 "What's new" bullet lines (each truncated if long) |
-| `--out` | `card.svg` | Output file path |
+| `--out` | `card.svg` | Output path |
 
 ## What animates
 
-All animation is CSS `@keyframes` embedded inside the SVG's own `<style>`,
-so it plays even when the SVG is loaded as a plain `<img>`:
+All animation is CSS `@keyframes` inside the SVG's own `<style>`, so it plays
+even when the SVG is loaded as a plain `<img>`:
 
-- Blinking cursor in the prompt box
-- Rotating asterisk + "thinking" status line, mimicking Claude Code's
-  in-progress indicator. The asterisk is drawn as vector spokes rather than a
-  text glyph so it spins exactly in place — a font glyph's ink centre drifts
-  from its em box (and the font differs per viewer), which makes it wobble.
+- Blinking cursor, parked at the end of the prompt text
+- The spinner cycles `·` → `+` → `*` → `✻` → `*` → `+`, opening then closing
+  like the CLI's. It is drawn as vector spokes rather than glyphs so it looks
+  identical for every viewer regardless of their fonts.
 - The mascot idly bobs and occasionally blinks
+
+## Why glyphs are placed per column
+
+Every text line pins each character to a terminal column via SVG's per-character
+`x` list, instead of letting the font advance it. Viewers' Latin and CJK
+fallback fonts rarely agree that a full-width glyph is exactly twice a
+half-width one, so without this the cursor drifts away from the end of the
+text and wrapping goes wrong — most visibly with Japanese prompts.
 
 ## Customising the mascot
 
@@ -83,5 +111,5 @@ reshape it. Each character is one pixel: `#` body, `S` shaded body, `O` eye,
 `.` transparent. The renderer sizes and centres itself to whatever grid you
 give it, so rows and columns can be added freely.
 
-> The mascot here is an original pixel-art approximation drawn to match the
-> look of the terminal welcome screen, not Anthropic's actual artwork.
+> The mascot is an original pixel-art approximation drawn to match the look of
+> the terminal welcome screen, not Anthropic's actual artwork.
