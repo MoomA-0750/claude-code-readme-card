@@ -14,6 +14,16 @@ No dependencies — pure Python stdlib, outputs a single self-contained SVG
 
 ## Usage
 
+Start from the example profile body, then edit it — this is the text that
+appears as the reply, and where your own content goes. `about.md` is
+gitignored, so your copy stays yours:
+
+```bash
+cp about.example.md about.md
+```
+
+Then generate the cards:
+
 ```bash
 python3 generate_card.py \
   --name "YourName" \
@@ -26,7 +36,9 @@ python3 generate_card.py \
   --out card.svg
 ```
 
-`--theme both` writes `card-light.svg` and `card-dark.svg`.
+`--theme both` writes `card-light.svg` and `card-dark.svg`. The example card
+above was generated from `about.example.md`, which demonstrates every piece of
+markdown the renderer supports.
 
 ### Light / dark switching
 
@@ -63,7 +75,7 @@ It is rendered as the assistant's reply, in a small markdown subset:
 | blank line | Vertical gap |
 
 Long lines wrap on their own, and CJK text wraps per character the way a
-terminal does.
+terminal does. See `about.example.md` for a worked example of all of the above.
 
 ### Options
 
