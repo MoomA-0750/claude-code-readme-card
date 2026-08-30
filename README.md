@@ -1,5 +1,7 @@
 # claude-code-readme-card
 
+English | [日本語](./README.ja.md)
+
 Generate a Claude Code-style animated SVG card for your GitHub profile README.
 No dependencies — pure Python stdlib, outputs a single self-contained SVG
 (animation is plain CSS embedded in the file, so it animates even as an image).
@@ -86,7 +88,7 @@ terminal does. See `about.example.md` for a worked example of all of the above.
 | `--model` | `Sonnet 5` | Model name in the account line |
 | `--plan` | `Claude Pro` | Plan name in the account line |
 | `--cwd` | `~/project` | Path under the welcome message |
-| `--title` | `Claude Code v2.1.241` | Text on the box's top border |
+| `--title` | `Claude Code` | Text on the box's top border |
 | `--prompt` | `Tell me about yourself` | The `❯` user line; wraps, cursor parks at its end |
 | `--response` | — | Assistant reply, markdown subset |
 | `--response-file` | — | Read `--response` from a file |
