@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 390" width="900" height="390" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">
+  <style>
+    text { font-family: SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+    .cursor { animation: blink 1s step-end infinite; }
+    @keyframes blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+
+    .spinner { transform-origin: 46px 372px; animation: spin 1.1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .mascot-bob { animation: bob 2.4s ease-in-out infinite; }
+    @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+
+    .mascot-blink { animation: eyeblink 4.5s ease-in-out infinite; }
+    @keyframes eyeblink { 0%, 92%, 100% { opacity: 0; } 94%, 96% { opacity: 1; } }
+  </style>
+
+  <rect x="0" y="0" width="900" height="390" fill="#fffdfb"/>
+
+  <!-- main welcome box -->
+  <rect x="20" y="20" width="860" height="220" rx="8" fill="#ffffff" stroke="#d97757" stroke-width="2"/>
+  <text x="40" y="50" font-size="15" font-weight="bold" fill="#d97757">Claude Code</text>
+  <line x1="20" y1="64" x2="880" y2="64" stroke="#d97757" stroke-width="1"/>
+  <line x1="432.8" y1="64" x2="432.8" y2="240" stroke="#d97757" stroke-width="1"/>
+
+  <!-- left column -->
+  <text x="226.4" y="98" font-size="19" font-weight="bold" fill="#2d2a26" text-anchor="middle">Welcome back MoomA!</text>
+
+  <g class="mascot-bob">
+    <g transform="translate(226.4, 148)">
+      <rect x="-30" y="-16" width="60" height="38" rx="18" fill="#f2a29a"/>
+      <rect x="-24" y="18" width="10" height="14" rx="3" fill="#d9847a"/>
+      <rect x="14" y="18" width="10" height="14" rx="3" fill="#d9847a"/>
+      <rect x="-16" y="-6" width="7" height="11" rx="1.5" fill="#241f1c"/>
+      <rect x="9" y="-6" width="7" height="11" rx="1.5" fill="#241f1c"/>
+      <rect class="mascot-blink" x="-16" y="-6" width="7" height="11" rx="1.5" fill="#f2a29a"/>
+      <rect class="mascot-blink" x="9" y="-6" width="7" height="11" rx="1.5" fill="#f2a29a"/>
+    </g>
+  </g>
+
+  <text x="226.4" y="198" font-size="12" fill="#7a746c" text-anchor="middle">Sonnet 5 · Claude Pro · Personal</text>
+  <text x="226.4" y="216" font-size="12" fill="#7a746c" text-anchor="middle">~/project</text>
+
+  <!-- right column -->
+  <text x="456.8" y="88" font-size="13" font-weight="bold" fill="#d97757">Tips for getting started</text>
+  <text x="456.8" y="106" font-size="12.5" fill="#7a746c">Run /init to create a CLAUDE.md file</text>
+  <text x="456.8" y="123" font-size="12.5" fill="#7a746c">with instructions for Claude</text>
+
+  <text x="456.8" y="152" font-size="13" font-weight="bold" fill="#d97757">What's new</text>
+  <text x="456.8" y="168" font-size="12.5" fill="#7a746c">• Added PreModelSwitch/PostModelSwitch hook events</text>
+<text x="456.8" y="185" font-size="12.5" fill="#7a746c">• Added live streaming of subagent tool calls</text>
+<text x="456.8" y="202" font-size="12.5" fill="#7a746c">• Added a spend limit bar to /usage</text>
+
+
+  <!-- status line -->
+  <rect x="20" y="264" width="3" height="16" fill="#d97757"/>
+  <text x="34" y="277" font-size="12.5" fill="#7a746c">Using Sonnet 5 · /model</text>
+
+  <!-- prompt box -->
+  <rect x="20" y="296" width="860" height="46" rx="6" fill="#ffffff" stroke="#d9d3ca" stroke-width="1.5"/>
+  <text x="44" y="325" font-size="15" fill="#2d2a26">›&#160;Explain this codebase to me</text>
+  <rect class="cursor" x="305.0" y="311" width="9" height="18" fill="#2d2a26"/>
+
+  <!-- thinking indicator -->
+  <text class="spinner" x="40" y="362" font-size="16" fill="#d97757" text-anchor="middle">✻</text>
+  <text x="58" y="362" font-size="12.5" fill="#d97757">Pondering… <tspan fill="#7a746c">(esc to interrupt)</tspan></text>
+</svg>
