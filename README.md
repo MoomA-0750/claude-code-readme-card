@@ -110,14 +110,6 @@ even when the SVG is loaded as a plain `<img>`:
   identical for every viewer regardless of their fonts.
 - The mascot idly bobs and occasionally blinks
 
-## Why glyphs are placed per column
-
-Every text line pins each character to a terminal column via SVG's per-character
-`x` list, instead of letting the font advance it. Viewers' Latin and CJK
-fallback fonts rarely agree that a full-width glyph is exactly twice a
-half-width one, so without this the cursor drifts away from the end of the
-text and wrapping goes wrong — most visibly with Japanese prompts.
-
 ## Customising the mascot
 
 The mascot is a pixel grid in `generate_card.py` — edit `MASCOT_PIXELS` to
@@ -125,5 +117,3 @@ reshape it. Each character is one pixel: `#` body, `S` shaded body, `O` eye,
 `.` transparent. The renderer sizes and centres itself to whatever grid you
 give it, so rows and columns can be added freely.
 
-> The mascot is an original pixel-art approximation drawn to match the look of
-> the terminal welcome screen, not Anthropic's actual artwork.
